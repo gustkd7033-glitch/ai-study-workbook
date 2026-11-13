@@ -296,11 +296,11 @@ input[type=date]{font:14px var(--f-ui);padding:7px 9px;border:1px solid var(--li
       <div class="s" role="listitem"><b>질문 정의</b><p>수치로 답할 수 있는 질문으로 구체화. 예) 2호선 출근 시간대 최다 혼잡 역</p></div>
       <div class="s" role="listitem"><b>데이터 탐색</b><p>공공데이터포털, 서울 열린데이터광장, KOSIS 등에서 검색</p></div>
       <div class="s" role="listitem"><b>수집</b><p>CSV 다운로드 또는 오픈API 인증키 발급 후 호출</p></div>
-      <div class="s key" role="listitem"><b>정제</b><p>결측치, 단위, 날짜 형식 통일. 실무 작업 시간의 절반 이상</p></div>
+      <div class="s key" role="listitem"><b>정제</b><p>결측치, 단위, 날짜 형식 통일. 로딩과 함께 작업 시간의 약 45%</p></div>
       <div class="s" role="listitem"><b>분석 · AI 활용</b><p>집계·시각화 요청 후 원본 수치와 반드시 대조</p></div>
       <div class="s" role="listitem"><b>결론 정리</b><p>차트 1개와 요약 3줄. 기획서·공모전 제출물 형태</p></div>
     </div>
-    <p class="caption"><b>그림 2-1.</b> 데이터 활용 6단계. 음영 처리한 정제 단계가 실무에서 가장 많은 시간이 드는 구간입니다.</p>
+    <p class="caption"><b>그림 2-1.</b> 데이터 활용 6단계. 음영 처리한 정제 단계가 실무에서 가장 많은 시간이 드는 구간입니다. Anaconda 「2020 State of Data Science」 조사(응답자 약 2,400명)에서 데이터 로딩·정제 등 준비 작업은 하루 업무의 약 45%, 모델 선택·학습·배포는 각각 11~12%였습니다.</p>
   </div>
 
   <div class="note"><span class="who">Practitioner Note</span>신입 실무자가 가장 많이 놓치는 단계는 정제입니다. "2026.11.13"과 "20261113"이 섞인 표를 그대로 AI에 넣으면, 그럴듯하지만 틀린 차트가 나옵니다. <mark>AI가 만든 결과는 원본에서 수치 세 개를 직접 찾아 대조</mark>하는 것을 원칙으로 합니다. 이 습관 하나가 6주 과정에서 가장 오래 남는 역량입니다.</div>
@@ -335,6 +335,25 @@ input[type=date]{font:14px var(--f-ui);padding:7px 9px;border:1px solid var(--li
       <div class="sheet stack"><h3>지자체 공공데이터 대회</h3><p class="small muted">시·도별로 매년 개최됩니다. 대부분 아이디어 기획서(HWP·PDF) 제출이며, 활용 데이터 출처와 AI 활용 방안이 필수 항목입니다.</p></div>
     </div>
   </div>
+<div class="stack">
+    <h2><span class="sec">2.5</span>용어 정리</h2>
+    <div class="tablebox"><table>
+      <thead><tr><th>용어</th><th>뜻</th><th>이 과정에서 만나는 곳</th></tr></thead>
+      <tbody>
+        <tr><td>오픈API</td><td>기관이 데이터를 프로그램으로 가져갈 수 있게 열어둔 창구. 정해진 주소로 요청하면 데이터를 돌려준다</td><td>4주차 데이터 수집</td></tr>
+        <tr><td>인증키 (API Key)</td><td>API를 호출할 때 신원을 증명하는 문자열. 비밀번호처럼 관리한다</td><td>공공데이터포털, KOSIS, OpenDART</td></tr>
+        <tr><td>CSV</td><td>쉼표로 칸을 나눈 표 형식 텍스트 파일. 엑셀·시트·AI 서비스 모두 읽을 수 있다</td><td>4주차 정제·분석</td></tr>
+        <tr><td>JSON · XML</td><td>API가 데이터를 돌려줄 때 쓰는 구조화 형식. 표로 바꾸는 과정이 필요하다</td><td>API 응답</td></tr>
+        <tr><td>결측치</td><td>값이 비어 있는 칸. 지울지, 0으로 볼지, 평균으로 채울지 먼저 정한다</td><td>정제 단계</td></tr>
+        <tr><td>환각 (Hallucination)</td><td>AI가 사실이 아닌 내용을 그럴듯하게 생성하는 현상</td><td>1주차, 검증 절차</td></tr>
+        <tr><td>토큰 · 컨텍스트</td><td>AI가 글을 처리하는 단위와 한 번에 기억하는 분량. 긴 자료는 잘리거나 앞부분을 놓칠 수 있다</td><td>긴 문서 요약</td></tr>
+        <tr><td>트리거 · 액션</td><td>자동화에서 '언제'(새 응답 도착)와 '무엇을'(메일 발송)</td><td>3주차 자동화</td></tr>
+        <tr><td>MVP</td><td>최소 기능 제품. 핵심 기능 하나만 동작하는 첫 버전</td><td>5주차 구현</td></tr>
+        <tr><td>배포</td><td>만든 결과물을 다른 사람이 링크로 열 수 있게 인터넷에 올리는 것</td><td>5주차 구현</td></tr>
+        <tr><td>공공누리</td><td>공공저작물 이용 조건 표시. 1유형 출처표시, 2유형 +상업적 이용금지, 3유형 +변경금지, 4유형 +상업적 이용금지·변경금지</td><td>데이터·이미지 재사용, 공모전 출처 표기</td></tr>
+      </tbody>
+    </table></div>
+  </div>
 </section>
 
 <!-- ===================== 04 커리큘럼 ===================== -->
@@ -349,7 +368,7 @@ input[type=date]{font:14px var(--f-ui);padding:7px 9px;border:1px solid var(--li
 
   <div class="stack">
     <h2><span class="sec">3.7</span>실무 프롬프트 템플릿</h2>
-    <p class="read">2026년 주요 AI 기업의 공식 가이드는 공통적으로 문장 표현보다 <mark>목표, 맥락, 결과물 형식, 제약 조건</mark>을 명확히 쓸 것을 권합니다. "단계별로 생각하라"는 지시나 대문자 강조는 최신 모델에서 오히려 과잉 반응을 일으킬 수 있어 권장되지 않습니다.</p>
+    <p class="read">2026년 주요 AI 기업의 공식 가이드는 공통적으로 문장 표현보다 <mark>목표, 맥락, 결과물 형식, 제약 조건</mark>을 명확히 쓸 것을 권합니다. "단계별로 생각하라"는 지시나 대문자 강조는 최신 모델에서 오히려 과잉 반응을 일으킬 수 있어 권장되지 않습니다. 기법의 종류가 궁금하면 프롬프트 기법 58가지를 분류한 연구(Schulhoff 외, 「The Prompt Report」, 2024)를 참고하되, 이 과정에서는 아래 4요소 틀 하나로 충분합니다.</p>
     <div class="stack" id="prompts"></div>
   </div>
 
@@ -363,6 +382,7 @@ input[type=date]{font:14px var(--f-ui);padding:7px 9px;border:1px solid var(--li
       <li>개인정보, 회사 내부 자료, 타인의 과제가 입력에 포함되지 않았는지 확인한다.</li>
       <li>과제·공모전은 AI 사용 규정을 먼저 확인하고, 사용 범위를 제출물에 명시한다.</li>
     </ol>
+    <p class="caption"><b>근거.</b> ChatGPT가 생성한 참고문헌 636건을 검증한 연구(Walters &amp; Wilder, Scientific Reports, 2023)에서 존재하지 않는 문헌의 비율은 GPT-3.5가 55%, GPT-4가 18%였고, 실제 문헌의 인용에도 GPT-3.5 43%, GPT-4 24%에서 오류가 있었습니다. 모델이 좋아져도 출처는 직접 확인해야 하는 이유입니다.</p>
     <div class="note"><span class="who">Practitioner Note</span>최근 신입 채용에서 확인하는 것은 AI 사용 여부가 아니라, AI가 만든 결과물을 이해·검증·수정할 수 있는지입니다. 면접에서 "이 부분은 AI가 작성했고, 여기서 오류를 발견해 이렇게 수정했습니다"라고 설명할 수 있다면 가장 설득력 있는 답변이 됩니다.</div>
   </div>
 
@@ -374,6 +394,82 @@ input[type=date]{font:14px var(--f-ui);padding:7px 9px;border:1px solid var(--li
       <li>수료증이 유료인 강의는 청강(무료)으로 충분합니다. 포트폴리오에는 수료증보다 직접 만든 결과물 링크를 넣습니다.</li>
       <li>무료 여부와 강의 구성은 제공사 사정으로 바뀔 수 있으니, 수강 전 해당 페이지에서 확인합니다.</li>
     </ol>
+  </div>
+  <div class="sheet stack">
+    <h2><span class="sec">3.10</span>주간 활동일지 템플릿</h2>
+    <p class="read">매주 노션에 같은 양식으로 기록합니다. 6주가 지나면 이 기록이 그대로 포트폴리오의 근거 자료가 됩니다. 특히 'AI 결과 검증 기록'은 면접에서 가장 많이 활용되는 항목입니다.</p>
+    <details open><summary><span>활동일지 양식 <span class="pill">매주</span></span></summary>
+      <div class="inner"><pre class="prompt" id="log-tpl">■ 주차 / 날짜: W○ / 2026.○○.○○
+■ 이번 주 목표 (산출물 기준):
+■ 수행 내용:
+  - 
+■ 사용한 도구와 핵심 프롬프트:
+  - 도구:
+  - 프롬프트 (그대로 붙여넣기):
+■ AI 결과 검증 기록:
+  - 확인한 항목: (예: 수치 3개 원본 대조 / 출처 검색 / 코드 줄 단위 설명)
+  - 발견한 오류와 수정 내용:
+■ 막힌 점과 해결 과정:
+■ 산출물 링크:
+■ 다음 주에 할 일:</pre>
+      <div class="row"><button type="button" id="log-copy">복사</button><span class="small muted">노션 페이지에 붙여넣으면 제목·목록 서식이 유지됩니다</span></div></div></details>
+  </div>
+
+  <div class="sheet stack">
+    <h2><span class="sec">3.11</span>공모전 기획서 자체 점검표</h2>
+    <p class="read">대회마다 기준은 다르지만, 공공데이터 공모전의 심사 항목은 대체로 비슷합니다. 아래는 2026년 국가보훈부 공공데이터·AI 공모전 공고의 배점 예시입니다. 제출 전 팀원끼리 항목별로 점수를 매겨보고, 15점 미만 항목부터 보완합니다.</p>
+    <div class="tablebox"><table>
+      <thead><tr><th>심사 항목</th><th>배점</th><th>점검 질문</th></tr></thead>
+      <tbody>
+        <tr><td>공공데이터 활용 적절성</td><td class="mono">20</td><td>주제에 맞는 데이터를 썼는가. 출처와 기준일이 명시되어 있는가</td></tr>
+        <tr><td>아이디어 구체성</td><td class="mono">15</td><td>누가, 언제, 어떤 화면에서 쓰는지 한 문단으로 설명되는가</td></tr>
+        <tr><td>아이디어 창의성</td><td class="mono">15</td><td>기존 서비스와 무엇이 다른지 한 문장으로 말할 수 있는가</td></tr>
+        <tr><td>서비스 효과성</td><td class="mono">15</td><td>개선 효과를 수치로 제시했는가 (시간, 비용, 이용자 수 등)</td></tr>
+        <tr><td>대국민 서비스 가능성·현실성</td><td class="mono">20</td><td>현재 기술과 공개 데이터만으로 구현 가능한가</td></tr>
+        <tr><td>데이터 분석(기획) 적절성</td><td class="mono">15</td><td>분석 방법과 예상 결과가 데이터로 뒷받침되는가</td></tr>
+        <tr><td>가점: 프로토타입·시연</td><td class="mono">+5</td><td>5주차 결과물 링크나 시연 영상을 첨부했는가</td></tr>
+      </tbody>
+    </table></div>
+    <p class="caption"><b>표 3-1.</b> 출처: 국가보훈부 「보훈 공공데이터·AI 공모전」 공모요강(2026). 같은 공고는 AI로 생성한 분석·서비스 부분의 표기와, 사용한 AI 및 프롬프트 첨부를 요구합니다. 다른 대회도 제출 전 규정을 반드시 확인합니다.</p>
+  </div>
+
+  <div class="sheet stack">
+    <h2><span class="sec">3.12</span>AI 사용 규정과 표기</h2>
+    <ol class="steps">
+      <li><b>AI 기본법.</b> 「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법」이 2026년 1월 22일 시행되었습니다. 생성형 AI로 만든 결과물 중 실제와 혼동될 수 있는 것은 AI 생성물임을 알리도록 하고 있으며, 정부는 시행 초기 1년간 계도 기간을 운영합니다. 대외에 공개하는 결과물에는 AI 사용 사실을 밝히는 것을 기본 원칙으로 합니다.</li>
+      <li><b>공모전 규정.</b> AI 사용 범위 표기와 프롬프트 첨부를 요구하는 대회가 늘고 있습니다(표 3-1 참고). 활동일지에 프롬프트를 남겨두면 제출 시 그대로 활용할 수 있습니다.</li>
+      <li><b>개인정보.</b> 개인정보보호위원회는 2025년 8월 「생성형 AI 개발·활용을 위한 개인정보 처리 안내서」를 공개했습니다. 실습에서는 실명, 연락처, 주민번호, 타인의 자기소개서, 회사 내부 자료를 AI에 입력하지 않습니다.</li>
+      <li><b>데이터·이미지 재사용.</b> 공공누리 유형을 확인합니다. 2유형·4유형은 상업적 이용이 금지되고, 3유형·4유형은 변경이 금지됩니다. 출처 표시는 모든 유형에 필요합니다.</li>
+    </ol>
+    <p class="caption">법령 해석이 필요한 경우 원문과 소관 부처 안내를 확인합니다. 이 절은 법률 자문이 아닙니다.</p>
+  </div>
+
+  <div class="sheet stack">
+    <h2><span class="sec">3.13</span>과정 설계 근거</h2>
+    <p class="read">온보딩 문항, 주차 구성, 복습 방식은 아래 공개 프레임워크와 연구를 참고해 설계했습니다.</p>
+    <div class="tablebox"><table>
+      <thead><tr><th>본 과정 요소</th><th>참고한 기준</th><th>반영 방식</th></tr></thead>
+      <tbody>
+        <tr><td>수행 경험 4개 영역 (이해·활용·검증윤리·구현)</td><td>UNESCO 「AI Competency Framework for Students」(2024): 인간 중심 사고, AI 윤리, AI 기술과 응용, AI 시스템 설계 4개 차원</td><td>윤리를 '검증·윤리'로 묶어 매주 실습에 포함</td></tr>
+        <tr><td>활용 범위 L0~L4와 주차 순서</td><td>같은 프레임워크의 이해(Understand) → 적용(Apply) → 창작(Create) 3단계</td><td>1~2주차 이해, 3~4주차 적용, 5~6주차 창작</td></tr>
+        <tr><td>AI와 협업하는 산출물 중심 과정</td><td>OECD·EC 「AI Literacy Framework」(AILit, 2025년 초안 공개 후 최종판 발간): Engage with AI · Create with AI · Manage AI · Shape AI 4개 영역</td><td>무엇을 AI에 맡기고 무엇을 직접 할지 판단하는 'Manage'를 검증 절차와 활동일지로 연습</td></tr>
+        <tr><td>주차별 복습 질문</td><td>Roediger &amp; Karpicke (2006), 「Test-Enhanced Learning」: 1주 뒤 기억률 시험 56% vs 재학습 42%</td><td>다시 읽기 대신 질문에 답하며 시작</td></tr>
+        <tr><td>검증 절차</td><td>Walters &amp; Wilder (2023): AI 생성 참고문헌의 허위·오류 비율</td><td>출처·수치 직접 대조를 매주 완료 기준에 포함</td></tr>
+      </tbody>
+    </table></div>
+    <div class="stack" style="gap:6px">
+      <h3>참고문헌</h3>
+      <ol class="steps small" style="font-size:13.5px">
+        <li>UNESCO (2024). <a href="https://www.unesco.org/en/articles/ai-competency-framework-students" target="_blank" rel="noopener">AI Competency Framework for Students</a>.</li>
+        <li>OECD · European Commission (2025). <a href="https://ailiteracyframework.org/" target="_blank" rel="noopener">AI Literacy Framework for Primary and Secondary Education (AILit)</a>.</li>
+        <li>Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-Enhanced Learning. <i>Psychological Science</i>, 17(3).</li>
+        <li>Walters, W. H., &amp; Wilder, E. I. (2023). <a href="https://www.nature.com/articles/s41598-023-41032-5" target="_blank" rel="noopener">Fabrication and errors in the bibliographic citations generated by ChatGPT</a>. <i>Scientific Reports</i>, 13.</li>
+        <li>Schulhoff, S., et al. (2024). <a href="https://arxiv.org/abs/2406.06608" target="_blank" rel="noopener">The Prompt Report: A Systematic Survey of Prompting Techniques</a>. arXiv:2406.06608.</li>
+        <li>Anaconda (2020). <a href="https://www.anaconda.com/resources/whitepaper/state-of-data-science-2020" target="_blank" rel="noopener">2020 State of Data Science</a>.</li>
+        <li>국가보훈부 (2026). <a href="https://www.mpva.go.kr/mpva/contents.do?key=2093" target="_blank" rel="noopener">보훈 공공데이터·AI 공모전 공모요강</a>.</li>
+        <li>개인정보보호위원회 (2025). 생성형 인공지능(AI) 개발·활용을 위한 개인정보 처리 안내서.</li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -447,6 +543,7 @@ const WEEKS=[
    out:"업무·학업 흐름도 1장 (AI 적용 지점 3곳 표기)",
    note:"신규 입사자 교육 첫날에는 도구보다 업무 흐름을 먼저 그리게 합니다. 팀이 매주 수작업으로 처리하는 일이 무엇인지 아는 것이, 어떤 도구를 쓸지보다 오래 남는 역량입니다.",
    check:["AI가 오류를 낼 수 있는 이유를 한 문장으로 설명할 수 있다","AI 적용 후보 3곳이 문서화되어 있다"],
+   review:["생성형 AI가 틀린 내용을 그럴듯하게 말하는 이유를 '확률'이라는 단어를 넣어 설명해보세요.", "같은 질문에 두 AI 서비스가 다른 답을 낸 경험에서, 어느 쪽을 믿을지 무엇으로 판단했나요?", "내 업무·학업 흐름에서 AI를 붙이기 가장 좋은 지점 하나와 그 이유는?"],
    refs:[
      {t:"Elements of AI",by:"University of Helsinki",u:"https://www.elementsofai.com/",d:"AI의 개념과 한계를 수식 없이 설명하는 입문 과정. 전 과정 무료."},
      {t:"Introduction to Generative AI (학습 경로)",by:"Google Skills",u:"https://www.skills.google/paths/118",d:"생성형 AI 기본 개념 약 2시간 분량. 무료 배지 제공."},
@@ -457,6 +554,7 @@ const WEEKS=[
    out:"자기소개서 문항 1개 완성본, 기획서 1장 초안",
    note:"AI에게 업무를 지시하는 것은 후배에게 업무를 위임하는 것과 같습니다. 목적, 수신자, 결과물의 형태를 함께 전달하지 않으면 의도와 다른 결과가 돌아옵니다.",
    check:["프롬프트에 4요소가 모두 포함되어 있다","초안 문장의 절반 이상을 본인 표현으로 수정했다"],
+   review:["프롬프트 4요소를 순서대로 말해보세요.", "'제약 조건'에 '지어내지 말 것'을 넣는 이유는 무엇인가요?", "AI 초안을 그대로 제출하면 생기는 문제를 두 가지 말해보세요."],
    refs:[
      {t:"Anthropic Academy",by:"Anthropic",u:"https://anthropic.skilljar.com/",d:"AI 활용·프롬프트 작성 과정. 무료, 수료증 제공."},
      {t:"DeepLearning.AI Short Courses",by:"DeepLearning.AI",u:"https://www.deeplearning.ai/short-courses/",d:"1~2시간 단위 실무 단기 강의 모음. 영상 무료, 수료증은 유료 플랜."}]},
@@ -466,6 +564,7 @@ const WEEKS=[
    out:"실제 동작하는 자동화 1건 (30초 시연 영상)",
    note:"자동화 업무의 대부분은 구현보다 오류 원인 추적입니다. 오류 메시지 전체를 AI에 전달하고 '의미와 우선 확인할 지점'을 묻는 방식을 이번 주에 익히는 것이 핵심입니다.",
    check:["트리거(조건)와 액션(동작)을 구분해 설명할 수 있다","오류를 1회 이상 직접 해결했다"],
+   review:["지난주 만든 자동화의 트리거와 액션을 각각 한 문장으로 말해보세요.", "Zapier, Make, n8n 중 하나를 고른다면 어떤 기준으로 고를 건가요?", "오류 메시지를 받았을 때 AI에게 함께 전달해야 할 정보 세 가지는?"],
    refs:[
      {t:"Apps Script 공식 문서",by:"Google for Developers",u:"https://developers.google.com/apps-script",d:"시트·Gmail·폼 자동화 공식 가이드와 예제. 트리거 설정 절차 확인용."},
      {t:"Make Academy",by:"Make",u:"https://academy.make.com/",d:"Make 시나리오 구성 입문 과정. 3주차 노코드 비교 실습 전 사전 학습."}]},
@@ -475,6 +574,7 @@ const WEEKS=[
    out:"데이터 근거 자료 1장 (팀 주제의 문제 정의 근거)",
    note:"분석 결과를 보고하면 가장 먼저 받는 질문은 '이 수치의 출처는 어디인가'입니다. 차트 하단에 출처, 기준일, 단위를 표기하는 습관이 있으면 신입이라도 신뢰를 얻습니다.",
    check:["데이터 출처와 기준일이 표기되어 있다","AI 결과와 원본 대조 기록이 있다"],
+   review:["팀 주제의 '수치로 답할 수 있는 질문'은 무엇인가요?", "공공데이터포털에서 401 오류가 났을 때 가장 먼저 해볼 조치는?", "AI가 만든 차트를 검증한 방법을 구체적으로 말해보세요."],
    refs:[
      {t:"Kaggle Learn",by:"Kaggle",u:"https://www.kaggle.com/learn",d:"Pandas, 데이터 정제, 시각화 단기 과정(3~5시간). 무료, 수료증 제공."},
      {t:"PublicDataReader",by:"오픈소스 (GitHub)",u:"https://github.com/WooilJeong/PublicDataReader",d:"공공데이터포털·KOSIS 등 국내 공공 데이터를 파이썬으로 조회하는 라이브러리. 코드 경험자용."}]},
@@ -484,15 +584,17 @@ const WEEKS=[
    out:"동작하는 결과물 링크, 피드백 반영 내역",
    note:"첫 버전은 부족한 것이 정상입니다. 실무에서도 기능 10개를 담은 기획서보다 핵심 기능 하나가 동작하는 시제품이 의사결정을 앞당깁니다.",
    check:["링크 접속 시 핵심 기능 1개가 정상 동작한다","설명할 수 없는 코드가 없다"],
+   review:["우리 팀 결과물에서 '없으면 안 되는 기능' 하나는 무엇인가요?", "작성된 코드 중 가장 설명하기 어려웠던 부분과 그 동작은?", "다른 팀에게 받은 피드백 중 바로 반영할 것 하나는?"],
    refs:[
      {t:"Generative AI for Beginners",by:"Microsoft (GitHub)",u:"https://github.com/microsoft/generative-ai-for-beginners",d:"생성형 AI 애플리케이션 구현 21개 레슨. 오픈소스, 무료."},
      {t:"CS50's Introduction to AI with Python",by:"Harvard",u:"https://cs50.harvard.edu/ai/",d:"코드로 AI를 구현해보는 7주 과정. 중급, 과정 수강은 무료."}]},
   {n:6,stage:"공모전 제출 · 회고",title:"공모전 제출과 포트폴리오 정리",
    goal:"팀 결과물을 공모전 양식에 맞춰 제출하고, 6주간의 활동일지를 포트폴리오 1페이지로 정리한다.",
-   steps:["대회 규정의 AI 사용 범위·데이터 출처 표기 조건 확인","기획서 구성: 문제 정의 → 데이터 근거(4주차) → 해결 방안(5주차 결과물) → 기대 효과","제출 서류 점검 (신청서, 개인정보·제3자 공개 동의서, 서약서 등 대회별 상이)","온보딩 프로필 항목으로 종료 시점 재측정","포트폴리오 문장 작성: 'AI로 ○○을 구현해 △△을 개선했다'"],
+   steps:["대회 규정의 AI 사용 범위·데이터 출처 표기 조건 확인","기획서 구성: 문제 정의 → 데이터 근거(4주차) → 해결 방안(5주차 결과물) → 기대 효과","자체 점검표(3.11)로 팀 내 사전 채점 후 보완","제출 서류 점검 (신청서, 개인정보·제3자 공개 동의서, 서약서 등 대회별 상이)","온보딩 프로필 항목으로 종료 시점 재측정","포트폴리오 문장 작성: 'AI로 ○○을 구현해 △△을 개선했다'"],
    out:"공모전 제출 완료, 포트폴리오 1페이지",
    note:"자기소개서에 '스터디 수료'라고만 쓰면 평가자의 관심을 끌기 어렵습니다. '공공데이터로 ○○를 분석해 결과물을 만들었고, 이 과정에서 발견한 오류를 이렇게 수정했다'는 문장은 면접에서 반드시 질문을 받습니다.",
    check:["제출 확인 메일 또는 화면 캡처를 보관했다","포트폴리오에 결과물 링크와 본인 역할이 명시되어 있다"],
+   review:["표 3-1 기준으로 우리 기획서가 가장 약한 항목과 보완 방법은?", "AI 사용 사실을 제출물 어디에 어떻게 표기했나요?", "6주 전과 비교해 활용 범위가 어떻게 달라졌는지 한 문장으로 말해보세요."],
    refs:[
      {t:"전국민 AI 경진대회",by:"과학기술정보통신부",u:"https://aichallenge4all.or.kr",d:"접수 중인 AI 대회 목록. 제출 대회 선정 시 참고."}]}
 ];
@@ -562,7 +664,46 @@ const PROMPTS=[
 4) 자주 발생하는 오류 2건과 해결 방법
 
 [제약 조건]
-메일 본문에는 연락처 뒷자리 4개만 표시할 것.`}
+메일 본문에는 연락처 뒷자리 4개만 표시할 것.`},
+  {t:"오류 해결 요청",w:"3·5주차",
+   p:`[목표]
+아래 오류의 원인을 찾고 해결하고 싶어.
+
+[맥락]
+- 하려던 작업: ○○
+- 사용 도구/언어: ○○ (예: Apps Script, Python)
+- 오류 메시지 전체:
+○○
+- 오류가 난 코드 부분:
+○○
+- 이미 시도한 것: ○○
+
+[결과물 형식]
+1) 오류 메시지의 의미를 쉬운 말로
+2) 가능한 원인을 가능성 높은 순으로 3개
+3) 원인별 확인 방법과 수정 코드
+4) 수정 후 정상 동작을 확인하는 방법
+
+[제약 조건]
+추측인 부분은 추측이라고 밝힐 것. 코드 전체를 새로 쓰지 말고 필요한 부분만 고칠 것.`},
+  {t:"채용공고 직무 분석",w:"면접 대비",
+   p:`[목표]
+아래 채용공고 ○건을 분석해 이 직무의 핵심 요구 역량과 내 경험의 연결 지점을 찾고 싶어.
+
+[맥락]
+- 희망 직무: ○○
+- 채용공고 원문 (공고별로 구분):
+○○
+- 내 경험 요약: ○○
+
+[결과물 형식]
+1) 공고에 반복 등장하는 역량 키워드와 등장 횟수 표
+2) 필수 역량 3개와 우대 역량 3개
+3) 역량별로 내 경험 중 연결 가능한 항목, 연결이 약한 항목 구분
+4) 예상 면접 질문 5개
+
+[제약 조건]
+공고에 없는 회사 정보는 추가하지 말 것. 내 경험을 과장하지 말 것.`}
 ];
 
 /* ---------- 유틸 ---------- */
@@ -608,6 +749,7 @@ function renderBook(){
       <dl class="wk-meta"><div><dt>학습 목표</dt><dd>${esc(w.goal)}</dd></div><div><dt>산출물</dt><dd><mark>${esc(w.out)}</mark></dd></div></dl>
       <div class="stack"><h3>실습 절차</h3><ol class="steps">${w.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>
       <div class="stack"><h3>완료 기준</h3><ul class="steps">${w.check.map(s=>`<li>${esc(s)}</li>`).join("")}</ul></div>
+      <div class="stack"><h3>시작 전 복습 질문</h3><p class="caption">자료를 다시 읽기 전에 먼저 답해봅니다. 근거는 3.13 참고.</p><ol class="steps">${w.review.map(q=>`<li>${esc(q)}</li>`).join("")}</ol></div>
       <div class="note"><span class="who">Practitioner Note</span>${esc(w.note)}</div>
       <div class="stack"><h3>참고 강의·교재</h3><div class="refs">${w.refs.map(r=>`<div class="ref"><a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.t)}</a><span class="by">${esc(r.by)}</span><p>${esc(r.d)}</p></div>`).join("")}</div></div>`;
   };
@@ -616,6 +758,7 @@ function renderBook(){
   $("#prompts").innerHTML=PROMPTS.map((p,i)=>`<details ${i===0?"open":""}><summary><span>${esc(p.t)} <span class="pill">${esc(p.w)}</span></span></summary>
     <div class="inner"><pre class="prompt">${esc(p.p)}</pre><div class="row"><button type="button" data-copy="${i}">복사</button><span class="small muted">○○ 항목만 교체해 사용</span></div></div></details>`).join("");
   $("#prompts").addEventListener("click",e=>{const b=e.target.closest("[data-copy]");if(b)copy(PROMPTS[b.dataset.copy].p,b)});
+  $("#log-copy").addEventListener("click",e=>copy($("#log-tpl").textContent,e.currentTarget));
 }
 
 /* ---------- 라우팅 ---------- */
